@@ -1,0 +1,817 @@
+/* Hudson Skincare V2 - Responsive Design */
+/* Mobile-first responsive approach for pharmaceutical luxury */
+
+/* === TABLET LARGE (1024px and down) === */
+@media (max-width: 1024px) {
+    :root {
+        --section-padding: 100px 0;
+        --container-padding: 0 24px;
+    }
+    
+    .nav-container {
+        padding: 0 24px;
+    }
+    
+    .heritage-content,
+    .philosophy-content,
+    .education-content,
+    .professional-content {
+        gap: 60px;
+    }
+    
+    .products-showcase {
+        gap: 60px;
+    }
+    
+    .hero-product {
+        right: 5%;
+    }
+    
+    .product-image {
+        width: 280px;
+        height: 420px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 32px;
+    }
+    
+    .science-process {
+        gap: 20px;
+    }
+    
+    .process-connector {
+        width: 60px;
+    }
+}
+
+/* === TABLET (768px and down) === */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 80px 0;
+        --container-padding: 0 20px;
+        --border-radius: 12px;
+        --border-radius-large: 24px;
+        --border-radius-xl: 32px;
+    }
+    
+    /* Navigation Mobile */
+    .nav-container {
+        height: 72px;
+        padding: 0 20px;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 32px 24px;
+        gap: 24px;
+        box-shadow: 0 20px 60px var(--shadow-strong);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-medium);
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-link {
+        font-size: 18px;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--border-subtle);
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    .consultation-btn {
+        display: none;
+    }
+    
+    /* Hero Mobile */
+    .hero {
+        min-height: 90vh;
+        text-align: center;
+    }
+    
+    .hero-content {
+        padding-top: 100px;
+    }
+    
+    .hero-title {
+        font-size: clamp(40px, 10vw, 64px);
+        margin-bottom: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+        margin-bottom: 32px;
+        max-width: 100%;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 48px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+    
+    .stat-divider {
+        display: none;
+    }
+    
+    .stat-number {
+        font-size: 36px;
+    }
+    
+    /* Hero Product Mobile */
+    .hero-product {
+        display: none;
+    }
+    
+    /* Section Headers Mobile */
+    .section-header {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: clamp(32px, 8vw, 48px);
+        margin-bottom: 16px;
+    }
+    
+    .section-description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    
+    /* Heritage Mobile */
+    .heritage-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .heritage-visual {
+        order: -1;
+        position: static;
+    }
+    
+    .heritage-image img {
+        height: 320px;
+    }
+    
+    .credentials {
+        flex-direction: column;
+    }
+    
+    .timeline-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .heritage-timeline::before {
+        display: none;
+    }
+    
+    .timeline-year::after {
+        position: static;
+        margin: 8px auto;
+    }
+    
+    /* Philosophy Mobile */
+    .philosophy-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .philosophy-quote {
+        padding: 32px 24px;
+        order: 2;
+    }
+    
+    .quote-mark {
+        font-size: 80px;
+        top: 8px;
+        left: 16px;
+    }
+    
+    .philosophy-quote blockquote {
+        font-size: 20px;
+    }
+    
+    .principle-item {
+        padding: 24px;
+    }
+    
+    .principle-icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .principle-icon i {
+        font-size: 20px;
+    }
+    
+    /* Science Mobile */
+    .science-process {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .process-connector {
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(to bottom, var(--border-subtle), var(--accent-gold), var(--border-subtle));
+    }
+    
+    .process-step {
+        max-width: 100%;
+        padding: 32px 24px;
+    }
+    
+    .step-content h3 {
+        font-size: 20px;
+    }
+    
+    .step-icon {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .step-icon i {
+        font-size: 24px;
+    }
+    
+    /* Products Mobile */
+    .products-showcase {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .hero-product-card {
+        padding: 32px 24px;
+    }
+    
+    .product-visual {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .product-image {
+        height: 320px;
+    }
+    
+    .product-name {
+        font-size: 24px;
+    }
+    
+    .product-actions {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+    }
+    
+    .amount {
+        font-size: 28px;
+    }
+    
+    .products-grid {
+        gap: 20px;
+    }
+    
+    /* Education Mobile */
+    .education-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .education-visual {
+        order: -1;
+        padding: 24px;
+    }
+    
+    .skin-layers {
+        max-width: 100%;
+    }
+    
+    .layer {
+        padding: 20px;
+    }
+    
+    .topic-item {
+        padding: 20px;
+    }
+    
+    .topic-item:hover {
+        transform: translateY(-4px);
+    }
+    
+    /* Professional Mobile */
+    .professional-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    
+    .testimonial-showcase {
+        position: static;
+        order: -1;
+    }
+    
+    .professional-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    
+    .professional-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .testimonial-card {
+        padding: 32px 24px;
+    }
+    
+    .testimonial-content blockquote {
+        font-size: 18px;
+    }
+    
+    .author-image {
+        width: 56px;
+        height: 56px;
+    }
+    
+    /* CTA Mobile */
+    .cta-content {
+        padding: 0 20px;
+    }
+    
+    .cta-title {
+        font-size: clamp(28px, 8vw, 40px);
+    }
+    
+    .cta-description {
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+    
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* Footer Mobile */
+    .footer {
+        padding: 60px 0 32px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        text-align: left;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .legal-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .footer-certifications {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* === MOBILE LARGE (480px and down) === */
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 60px 0;
+        --container-padding: 0 16px;
+    }
+    
+    .nav-container {
+        padding: 0 16px;
+        height: 64px;
+    }
+    
+    .nav-menu {
+        top: 64px;
+        padding: 24px 16px;
+    }
+    
+    .brand-name {
+        font-size: 20px;
+    }
+    
+    .logo-mark {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .logo-h {
+        font-size: 20px;
+    }
+    
+    .shop-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .hero-content {
+        padding-top: 80px;
+    }
+    
+    .hero-badge {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .hero-title {
+        font-size: clamp(32px, 12vw, 48px);
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .btn {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    .section-label {
+        padding: 6px 16px;
+        font-size: 12px;
+    }
+    
+    .section-title {
+        font-size: clamp(24px, 8vw, 36px);
+    }
+    
+    .section-description {
+        font-size: 14px;
+    }
+    
+    .heritage-image img {
+        height: 240px;
+    }
+    
+    .timeline-year {
+        font-size: 20px;
+    }
+    
+    .timeline-content h4 {
+        font-size: 16px;
+    }
+    
+    .philosophy-quote {
+        padding: 24px 16px;
+    }
+    
+    .quote-mark {
+        font-size: 60px;
+    }
+    
+    .philosophy-quote blockquote {
+        font-size: 18px;
+    }
+    
+    .principle-item {
+        padding: 16px;
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .process-step {
+        padding: 24px 16px;
+    }
+    
+    .step-content h3 {
+        font-size: 18px;
+    }
+    
+    .hero-product-card {
+        padding: 24px 16px;
+    }
+    
+    .product-image {
+        height: 280px;
+    }
+    
+    .product-name {
+        font-size: 20px;
+    }
+    
+    .amount {
+        font-size: 24px;
+    }
+    
+    .ingredient-item {
+        padding: 12px;
+    }
+    
+    .ingredient-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+    
+    .layer {
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+    
+    .topic-item {
+        padding: 16px;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .testimonial-card {
+        padding: 24px 16px;
+    }
+    
+    .testimonial-content blockquote {
+        font-size: 16px;
+    }
+    
+    .author-image {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .cta-section {
+        padding: 80px 0;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* === MOBILE SMALL (360px and down) === */
+@media (max-width: 360px) {
+    :root {
+        --section-padding: 40px 0;
+        --container-padding: 0 12px;
+    }
+    
+    .nav-container {
+        padding: 0 12px;
+    }
+    
+    .hero-title {
+        font-size: clamp(24px, 12vw, 36px);
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+    
+    .section-title {
+        font-size: clamp(20px, 8vw, 28px);
+    }
+    
+    .heritage-image img {
+        height: 200px;
+    }
+    
+    .philosophy-quote blockquote {
+        font-size: 16px;
+    }
+    
+    .product-image {
+        height: 240px;
+    }
+    
+    .testimonial-content blockquote {
+        font-size: 14px;
+    }
+    
+    .cta-title {
+        font-size: clamp(20px, 8vw, 28px);
+    }
+    
+    .cta-description {
+        font-size: 14px;
+    }
+}
+
+/* === LANDSCAPE MOBILE === */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+    }
+    
+    .hero-content {
+        padding-top: 60px;
+    }
+    
+    .hero-title {
+        font-size: clamp(28px, 6vw, 40px);
+        margin-bottom: 16px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+    
+    .hero-cta {
+        flex-direction: row;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
+    
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    :root {
+        --section-padding: 60px 0;
+    }
+}
+
+/* === HIGH DPI DISPLAYS === */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo-mark,
+    .heritage-image img,
+    .product-image img,
+    .author-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* === REDUCED MOTION === */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .product-float,
+    .particle,
+    .scroll-line::before {
+        animation: none !important;
+    }
+    
+    .title-line-1,
+    .title-line-2,
+    .hero-subtitle,
+    .hero-cta,
+    .hero-stats,
+    .scroll-indicator {
+        opacity: 1 !important;
+        transform: none !important;
+        animation: none !important;
+    }
+}
+
+/* === TOUCH DEVICES === */
+@media (hover: none) {
+    .btn:hover::before {
+        display: none;
+    }
+    
+    .product-card:hover .product-overlay {
+        opacity: 0;
+    }
+    
+    .topic-item:hover,
+    .principle-item:hover,
+    .layer:hover {
+        transform: none;
+    }
+}
+
+/* === PRINT STYLES === */
+@media print {
+    .navbar,
+    .hero-product,
+    .scroll-indicator,
+    .cta-section,
+    .footer {
+        display: none !important;
+    }
+    
+    .hero {
+        min-height: auto;
+        padding: 40px 0;
+    }
+    
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+    
+    .section-title,
+    .hero-title {
+        color: #333 !important;
+    }
+    
+    :root {
+        --section-padding: 30px 0;
+    }
+}
+
+/* === ACCESSIBILITY ENHANCEMENTS === */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-navy: #000000;
+        --text-charcoal: #000000;
+        --text-slate: #333333;
+        --border-subtle: #666666;
+    }
+}
+
+/* === FOCUS STATES === */
+.btn:focus,
+.nav-link:focus,
+.search-toggle:focus,
+.menu-toggle:focus {
+    outline: 2px solid var(--accent-gold);
+    outline-offset: 2px;
+}
+
+/* === LOADING STATES === */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* === ERROR STATES === */
+.error {
+    border-color: #e53e3e;
+    background-color: #fed7d7;
+}
+
+/* === SUCCESS STATES === */
+.success {
+    border-color: #38a169;
+    background-color: #c6f6d5;
+}

@@ -1,0 +1,672 @@
+/* Responsive Design - Mobile First Approach */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1024px) {
+    :root {
+        --section-padding: 80px 0;
+        --container-padding: 0 20px;
+    }
+    
+    .hero-container {
+        gap: 60px;
+    }
+    
+    .science-content,
+    .dermatologist-content {
+        gap: 60px;
+    }
+    
+    .footer-content {
+        gap: 60px;
+    }
+    
+    .hero-stats {
+        gap: 16px;
+    }
+    
+    .stat-item .stat-number {
+        font-size: 28px;
+    }
+    
+    .recommendation-stats {
+        gap: 24px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 0;
+        --container-padding: 0 16px;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        height: 70px;
+        padding: 0 16px;
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-brand .brand-text {
+        font-size: 20px;
+    }
+    
+    .logo {
+        width: 32px;
+        height: 32px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 140px 0 80px;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-content {
+        gap: 24px;
+    }
+    
+    .hero-title {
+        font-size: clamp(36px, 8vw, 56px);
+    }
+    
+    .hero-subtitle {
+        font-size: 18px;
+        max-width: 100%;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .stat-divider {
+        display: none;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+    
+    /* Product Showcase */
+    .product-card {
+        transform: rotate(0deg);
+        max-width: 240px;
+        margin: 0 auto;
+    }
+    
+    .product-card:hover {
+        transform: scale(1.05);
+    }
+    
+    .product-image {
+        width: 100%;
+        height: 280px;
+    }
+    
+    .floating-elements .molecule-icon,
+    .floating-elements .science-badge {
+        display: none;
+    }
+    
+    /* Trust Section */
+    .trust-content {
+        gap: 24px;
+    }
+    
+    .trust-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    /* Products Grid */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .product-item {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    /* Science & Dermatologist Sections */
+    .science-content,
+    .dermatologist-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .science-visual {
+        order: -1;
+    }
+    
+    .lab-image {
+        height: 320px;
+    }
+    
+    .lab-overlay {
+        bottom: 16px;
+        right: 16px;
+        padding: 16px;
+    }
+    
+    .research-stat .stat-number {
+        font-size: 24px;
+    }
+    
+    .recommendation-stats {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .testimonial-card {
+        padding: 32px 24px;
+    }
+    
+    .testimonial-card blockquote {
+        font-size: 18px;
+    }
+    
+    /* Ingredients Grid */
+    .ingredients-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 24px;
+    }
+    
+    .ingredient-card {
+        padding: 32px 24px;
+    }
+    
+    .ingredient-card.featured {
+        transform: none;
+        order: -1;
+    }
+    
+    .ingredient-card.featured:hover {
+        transform: translateY(-8px);
+    }
+    
+    .ingredient-icon {
+        width: 64px;
+        height: 64px;
+        font-size: 24px;
+    }
+    
+    .ingredient-name {
+        font-size: 20px;
+    }
+    
+    /* CTA Section */
+    .cta-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-section .btn {
+        width: 100%;
+        max-width: 320px;
+    }
+    
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .footer-legal {
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .legal-links {
+        justify-content: center;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 40px 0;
+        --container-padding: 0 12px;
+        --border-radius: 8px;
+        --border-radius-large: 16px;
+    }
+    
+    /* Navigation */
+    .nav-container {
+        height: 60px;
+        padding: 0 12px;
+    }
+    
+    .nav-brand .brand-text {
+        font-size: 18px;
+    }
+    
+    .logo {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .nav-actions {
+        gap: 12px;
+    }
+    
+    .shop-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    
+    /* Hero Section */
+    .hero {
+        padding: 120px 0 60px;
+    }
+    
+    .hero-content {
+        gap: 20px;
+    }
+    
+    .hero-badge {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .hero-title {
+        font-size: clamp(28px, 10vw, 42px);
+    }
+    
+    .hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .hero-stats {
+        gap: 16px;
+    }
+    
+    .stat-item .stat-number {
+        font-size: 24px;
+    }
+    
+    .stat-item .stat-label {
+        font-size: 12px;
+    }
+    
+    .hero-actions .btn {
+        padding: 14px 24px;
+        font-size: 14px;
+    }
+    
+    /* Product Showcase */
+    .product-image {
+        height: 240px;
+    }
+    
+    .product-info {
+        padding: 20px;
+    }
+    
+    .product-info h3 {
+        font-size: 16px;
+    }
+    
+    .product-info p {
+        font-size: 13px;
+    }
+    
+    /* Trust Section */
+    .trust-section {
+        padding: 40px 0;
+    }
+    
+    .trust-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .trust-item {
+        font-size: 14px;
+    }
+    
+    .trust-item i {
+        font-size: 18px;
+    }
+    
+    /* Section Headers */
+    .section-label {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .section-title {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    
+    .section-subtitle {
+        font-size: 16px;
+    }
+    
+    /* Product Details */
+    .product-details {
+        padding: 24px 20px;
+    }
+    
+    .product-name {
+        font-size: 18px;
+    }
+    
+    .product-type {
+        font-size: 14px;
+    }
+    
+    .current-price {
+        font-size: 20px;
+    }
+    
+    .ingredient {
+        font-size: 11px;
+        padding: 3px 8px;
+    }
+    
+    /* Feature Items */
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+    
+    .feature-icon {
+        width: 48px;
+        height: 48px;
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    
+    .feature-content h4 {
+        font-size: 16px;
+    }
+    
+    .feature-content p {
+        font-size: 14px;
+    }
+    
+    /* Lab Showcase */
+    .lab-image {
+        height: 240px;
+    }
+    
+    .lab-overlay {
+        bottom: 12px;
+        right: 12px;
+        padding: 12px;
+    }
+    
+    .research-stat .stat-number {
+        font-size: 20px;
+    }
+    
+    .research-stat .stat-text {
+        font-size: 12px;
+    }
+    
+    /* Ingredients */
+    .ingredients-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ingredient-card {
+        padding: 24px 20px;
+    }
+    
+    .ingredient-icon {
+        width: 56px;
+        height: 56px;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .ingredient-name {
+        font-size: 18px;
+    }
+    
+    .ingredient-description {
+        font-size: 14px;
+    }
+    
+    .benefit {
+        font-size: 11px;
+        padding: 4px 8px;
+    }
+    
+    /* Testimonial */
+    .testimonial-card {
+        padding: 24px 20px;
+    }
+    
+    .quote-icon {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    
+    .testimonial-card blockquote {
+        font-size: 16px;
+        margin-bottom: 24px;
+    }
+    
+    .author-info h4 {
+        font-size: 16px;
+    }
+    
+    .author-info span {
+        font-size: 13px;
+    }
+    
+    /* CTA */
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-title {
+        font-size: clamp(24px, 6vw, 36px);
+    }
+    
+    .cta-subtitle {
+        font-size: 16px;
+    }
+    
+    .cta-section .btn.large {
+        padding: 16px 32px;
+        font-size: 16px;
+    }
+    
+    /* Footer */
+    .footer {
+        padding: 60px 0 32px;
+    }
+    
+    .footer-content {
+        margin-bottom: 40px;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .link-group h4 {
+        margin-bottom: 16px;
+        font-size: 16px;
+    }
+    
+    .link-group a {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .footer-bottom {
+        padding-top: 24px;
+        font-size: 14px;
+    }
+    
+    .legal-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .payment-methods {
+        font-size: 12px;
+    }
+    
+    .payment-icons i {
+        font-size: 20px;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 320px) {
+    .hero-title {
+        font-size: 24px;
+    }
+    
+    .hero-subtitle {
+        font-size: 14px;
+    }
+    
+    .section-title {
+        font-size: 20px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+    
+    .product-card {
+        max-width: 200px;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+    
+    .trust-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-actions {
+        gap: 12px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo,
+    .footer-logo {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Landscape Mobile Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: 100px 0 60px;
+    }
+    
+    .hero-container {
+        gap: 32px;
+    }
+    
+    .hero-title {
+        font-size: clamp(32px, 6vw, 48px);
+    }
+    
+    :root {
+        --section-padding: 50px 0;
+    }
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .floating-elements .molecule-icon,
+    .floating-elements .science-badge {
+        animation: none;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    /* This can be extended for dark mode support in future */
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .floating-elements,
+    .cta-section,
+    .footer {
+        display: none;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .section-padding {
+        padding: 32px 0;
+    }
+    
+    * {
+        background: white !important;
+        color: black !important;
+        box-shadow: none !important;
+    }
+}
